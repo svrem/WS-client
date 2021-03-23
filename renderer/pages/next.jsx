@@ -7,10 +7,16 @@ const Next = () => {
   const [bad, setBad] = useState(false);
   const router = useRouter();
 
-  if (bad) {
-    console.log("");
-    router.push("/home");
-  } else {
+  useEffect(() => {
+    if (bad) {
+      router.push("/home");
+    }
+  }, [bad]);
+
+  if (!bad) {
+    // console.log("");
+    // router.push("/home");
+
     try {
       url = cookieCutter.get("url");
     } catch {}
