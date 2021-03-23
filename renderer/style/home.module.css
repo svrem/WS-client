@@ -1,0 +1,67 @@
+.title {
+  text-align: center;
+  color: white;
+}
+
+.title,
+.container > input,
+.container > button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.container {
+  width: 30vw;
+  height: 65vh;
+  background-color: #272727;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+  position: absolute;
+  min-height: 500px;
+}
+
+.container > * {
+  /* margin-left: 20%; */
+  width: 60%;
+  height: 10%;
+  max-height: 50px;
+  /* max-width: 200px; */
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.container > button {
+  margin-top: 30px;
+  background: #9c9c9c;
+  font-size: medium;
+}
+
+.container > input {
+  font-size: medium;
+  text-indent: 10px;
+  color: black;
+}
+
+.container > input:focus {
+  outline: none;
+}
+
+.container > button:focus {
+  outline: none;
+  box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.false {
+  border: 2px red solid;
+}
