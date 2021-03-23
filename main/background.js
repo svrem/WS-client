@@ -18,6 +18,8 @@ if (isProd) {
     height: 600,
     icon: "../../public/images/logo.png",
     backgroundColor: "#373737",
+    minWidth: 500,
+    minHeight: 800,
   });
 
   mainWindow.setTitle("WebSocket Client");

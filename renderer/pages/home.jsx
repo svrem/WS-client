@@ -11,8 +11,11 @@ const Home = () => {
 
   let errorMessage = "";
   try {
-    router.get("errorMessage");
-  } catch {}
+    console.log(cookieCutter.get("errorMessage"));
+    errorMessage = cookieCutter.get("errorMessage");
+  } catch {
+    console.log("No Error");
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,12 +34,11 @@ const Home = () => {
       setBad(true);
     }
   }, [url]);
-  console.log(errorMessage);
   return (
     <>
       {
-        <div className={styles.errorMessage ? errorMessage !== "" : ""}>
-          {errorMessage ? errorMessage !== "" : ""}
+        <div className={errorMessage !== "" ? styles.errorMessage : ""}>
+          <h1>{errorMessage !== "" ? errorMessage : ""}</h1>
         </div>
       }
       <h1 className={styles.title}>Connect</h1>

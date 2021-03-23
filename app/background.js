@@ -120,7 +120,9 @@ if (isProd) {
     width: 1000,
     height: 600,
     icon: "../../public/images/logo.png",
-    backgroundColor: "#373737"
+    backgroundColor: "#373737",
+    minWidth: 500,
+    minHeight: 800
   });
   mainWindow.setTitle("WebSocket Client");
 
@@ -195,7 +197,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 function createWindow(windowName, options) {
-  const key = 'window-state';
+  const key = "window-state";
   const name = `window-state-${windowName}`;
   const store = new electron_store__WEBPACK_IMPORTED_MODULE_12___default.a({
     name
@@ -262,10 +264,9 @@ function createWindow(windowName, options) {
       nodeIntegration: true
     }, options.webPreferences)
   }));
-  win.on('close', saveState);
+  win.on("close", saveState);
   return win;
 }
-;
 
 /***/ }),
 
