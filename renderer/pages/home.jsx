@@ -11,18 +11,14 @@ const Home = () => {
 
   let errorMessage = "";
   try {
-    console.log(cookieCutter.get("errorMessage"));
     errorMessage = cookieCutter.get("errorMessage");
-  } catch {
-    console.log("No Error");
-  }
+  } catch {}
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!bad) {
+    if (!bad && url != "") {
       cookieCutter.set("url", url);
 
-      console.log("PUSH");
       router.push("/next");
     }
   };
